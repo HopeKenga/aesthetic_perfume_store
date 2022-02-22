@@ -1,4 +1,102 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 * {
-    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Sacramento', sans-serif;
+    scroll-behavior: smooth;
+    transition: 300ms ease-in-out;
+    scroll-padding-top: 2rem;
+    list-style: none;
+    color: #2F5233;
+}
+
+:root {
+    --main-color: #2F5233;
+    --light-color: #B8AEA4;
+    --text-color: #0000;
+    --alt-color: #7B7167;
+    --bg-color: #E9E6E1;
+    --hover-color: #daa520;
+}
+
+section {
+    padding: 50px 10%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 100px;
+    background-color: #E9E6E1;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--hover-color);
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--hover-color);
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./images/Gucci\ Perfume.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: scroll;
+    display: flex;
+    align-items: center;
+}
+
+.home-text h1 {
+    font-family: 'OpensANS';
+    font-size: 2.7rem;
+    color: var(--hover-color)
+}
+
+.home-text span {
+    color: var(--hover-color)
+}
+
+.btn {
+    padding: 10px 14px;
+    color: var(--light-color);
+    font-size: 40px;
+}
+
+.btn:hover {
+    color: var(--main-color)
 }
