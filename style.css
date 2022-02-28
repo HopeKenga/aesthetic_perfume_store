@@ -1,221 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-:root {
-    --main-color: #2F5233;
-    --light-color: #B8AEA4;
-    --text-color: #0000;
-    --alt-color: #7B7167;
-    --bg-color: #E9E6E1;
-    --hover-color: #daa520;
-    --nude: #9B6B43;
-    --brown: #8E5431;
-    --light-brown: #C98860;
-    --transition: all 300ms ease-in-out;
-    --box-shadow: 0px 0px 16px 1px rgba(14, 52, 54, 0);
-}
-
-body {
-    background-color: #fff0f5;
-    margin: 0px;
-    font-family: 'Sacramento', sans-serif;
-}
-
-ul {
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Open+Sans:wght@300&family=Sacramento&display=swap');
+* {
+    margin: 10;
+    padding: 10;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
     list-style: none;
-    font-family: 'Sacramento', sans-serif;
-}
-
-a {
     text-decoration: none;
 }
 
-section {
+:root {
+    --main-color: #008080;
+    --light-color: #faf0e6;
+    --text-color: #1A5653;
+    --hover-color: #daa520;
+    --bg-color: #bc8f8f;
+}
+
+img {
     width: 100%;
-    height: 95vh;
-    background-image: url("./images/Unknown-2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    background-color: #fff0f5;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    padding: 0px 5%;
+body {
     color: var(--main-color);
-}
-
-nav ul {
-    display: flex;
-    justify-content: space-between;
-    font-family: 'Sacramento', sans-serif;
-}
-
-nav ul li a {
     margin: 30px;
-    font-family: 'Sacramento', sans-serif;
-    color: var(--main-color);
-    font-size: 25px;
-    font-weight: 700;
+}
+
+.container {
+    max-width: 968px;
+    margin: auto;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
 }
 
 .logo {
-    font-size: 50px;
-    color: #daa520;
-    font-family: 'Sacramento', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--main-color);
+    margin: 0px auto 0px 24px;
+    font-family: 'Sacramento';
 }
 
-.text-container p:nth-child(1) {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: var(--brown);
-    font-size: 22px;
+.logo:hover {
+    color: var(--hover-color);
 }
 
-.text-container p:nth-child(2) {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    letter-spacing: 1px;
-    color: var(--brown);
-    font-size: 60px;
-}
-
-.text-container p:nth-child(3) {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--brown);
-    font-size: 30px;
-    line-height: 30px;
-}
-
-.text-container p {
-    line-height: 0px;
-    margin: 45px 0px 25px;
-}
-
-.text-container {
-    position: absolute;
-    left: 13%;
-    top: 42%;
-    transform: translate(-13%, -42%);
-}
-
-.text-container button {
-    width: 130px;
-    height: 42px;
-    border-radius: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    outline: none;
-    margin: 0px 10px;
-}
-
-.diversity {
-    border: 2px solid #fff0f5;
-    color: #daa520;
-}
-
-.explore {
-    background-color: #fff0f5;
-    color: #daa520;
-    border: none;
-}
-
-button:active {
-    transform: scale(1.1);
-}
-
-#sect-1 {
-    align-items: center;
-    background: #fff0f5;
-    color: #daa520;
-    margin: 0;
-    padding: 0;
-}
-
-.row {
-    padding: auto;
-    background-color: #008080;
-    width: 80%;
-    margin: 4% auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.col {
-    flex-basis: 25%;
-    text-align: center;
-    position: relative;
-}
-
-.col img {
-    width: 100%;
+.menu-icon {
+    background-color: var(--bg-color);
+    display: grid;
+    row-gap: 5px;
+    padding: 14px 12px;
     cursor: pointer;
-    transition: 1s;
+    z-index: 200;
+    transition: 0.3s;
 }
 
-.col p {
-    margin: 20px 0;
+.menu-icon div {
+    padding-left: 10px;
+    display: block;
+    background-color: var(--light-color);
+    height: 1px;
+    width: 5px;
+    transition: 0.3s;
 }
 
-.col:hover img {
-    transform: scale(1.1);
-}
-
-.col span {
-    width: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid #008080;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-.col .arrow {
+.navbar {
+    position: fixed;
     left: 0;
-    right: unset;
-    border-left: 15px solid #008080;
-    border-right: 15px solid transparent;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(4.5px);
+    z-index: 106;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
 }
 
-@media screen and (max-width: 770px) {
-    .row {
-        width: 95%;
-    }
-    .col {
-        flex-basis: 50%;
-        font-size: 14px;
-    }
-    .row .col:nth-child(1) {
-        order: 1;
-    }
-    .row .col:nth-child(2) {
-        order: 2;
-    }
-    .row .col:nth-child(3) {
-        order: 5;
-    }
-    .row .col:nth-child(4) {
-        order: 6;
-    }
-    .row .col:nth-child(5) {
-        order: 3;
-    }
-    .row .col:nth-child(6) {
-        order: 4;
-    }
-    .row .col:nth-child(7) {
-        order: 7;
-    }
-    .row .col:nth-child(8) {
-        order: 8;
-    }
+.navbar.active {
+    display: flex;
+}
+
+.navbar a {
+    padding: 20px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.2s all linear;
+    font-family: 'Hubballi';
+}
+
+.navbar a:hover {
+    background: var(--bg-color);
+    font-size: 1.8rem;
+    color: var(--main-color);
+}
+
+.nav-icons {
+    display: flex;
+    column-gap: 1rem;
+    z-index: 200;
+}
+
+.nav-icons .bx {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    padding: 10px;
+    background: var(--bg-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
