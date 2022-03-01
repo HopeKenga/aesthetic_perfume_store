@@ -22,13 +22,29 @@ img {
 }
 
 body {
-    color: var(--light-color);
+    color: var(--text-color);
 }
 
 .container {
     max-width: 968px;
     margin: auto;
     width: 100%;
+}
+
+.btn {
+    background: var(--text-color);
+    padding: 15px 24px;
+    color: var(--light-color);
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: 'Sacramento';
+}
+
+.btn:hover {
+    background: var(--hover-color);
+    transition: 0.3s all linear;
 }
 
 .header {
@@ -75,6 +91,18 @@ body {
     width: 25px;
 }
 
+.move .line1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.move .line2 {
+    opacity: 0;
+}
+
+.move .line3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .navbar {
     position: fixed;
     left: 0;
@@ -110,4 +138,76 @@ body {
 .nav-icons {
     color: var(--text-color);
     font-size: 20px;
+}
+
+.cart {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(4.5px);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    padding: 20px;
+    row-gap: 1rem;
+}
+
+.cart-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-box img {
+    width: 100px;
+}
+
+.cart-text {
+    display: grid;
+    font-family: 'Hubballi';
+}
+
+.cart-text h3 {
+    font-size: 1rem;
+}
+
+.cart-text span {
+    font-weight: 500;
+}
+
+.cart-box .bx {
+    font-size: 20px;
+}
+
+.cart-box .bx:hover {
+    color: var(--hover-color);
+}
+
+.total {
+    font-family: 'Hubballi';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.total h3 {
+    font-size: 1rem;
+}
+
+.total span {
+    font-weight: 500;
 }
