@@ -26,3 +26,22 @@ document.querySelector('#user-icon').onclick = () => {
     navbar.classList.remove('active');
     menu.classList.remove('move')
 }
+
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow', window.scrollY > 0);
+});
+
+window.onscroll = () => {
+    navbar.classList.remove('active');
+    menu.classList.remove('move');
+
+
+}
+
+let scrolltop = document.querySelector('.scroll-top');
+
+window.addEventListener('scroll', () => {
+    scrolltop.classList.toggle('active', window.scrollY > 0);
+});
