@@ -17,6 +17,10 @@
     --bg-color: #bc8f8f;
 }
 
+section {
+    padding: 4rem 0 3 rem;
+}
+
 img {
     width: 100%;
 }
@@ -280,5 +284,59 @@ body {
 
 .login-form form .btn {
     font-family: 'Sacramento';
-    font-size: 21px;
+    font-size: 19px;
+}
+
+.home {
+    position: relative;
+    min-height: 640px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-text h1 {
+    font-family: 'Hubballi';
+    font-size: 1.4rem;
+}
+
+.home-text h1 span {
+    font-family: 'Hubballi';
+    font-size: 2.4rem;
+}
+
+.home-text p {
+    margin: 1rem 0 1.8rem;
+    font-family: 'Hubballi';
+    color: var(--bg-color);
+    color: var(--main-color)
+}
+
+.home-img img {
+    width: 400px;
+}
+
+.home-img {
+    position: relative;
+}
+
+.home-img::after {
+    content: '';
+    height: 215px;
+    width: 490px;
+    background: #4682B4;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.home-text .btn {
+    background: var(--bg-color);
+}
+
+.home-text .btn:hover {
+    color: var(--main-color);
 }
