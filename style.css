@@ -325,7 +325,7 @@ body {
     content: '';
     height: 215px;
     width: 490px;
-    background: #4682B4;
+    background: #008080;
     position: absolute;
     bottom: 0px;
     right: 20px;
@@ -339,4 +339,87 @@ body {
 
 .home-text .btn:hover {
     color: var(--main-color);
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.heading h2 {
+    font-family: 'Hubballi';
+    font-weight: 400;
+}
+
+.heading a {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+.heading a:hover {
+    color: var(--hover-color);
+    border-bottom: 2px solid var(--hover-color);
+}
+
+.popular-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 200px, auto));
+    gap: 2rem;
+}
+
+.box {
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 0.5rem;
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.box img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.box-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #b0c4de;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+.box-text:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title-price h3 {
+    font-family: 'Hubballi';
+    font-weight: 1rem;
+    font-weight: 600;
+}
+
+.title-price span {
+    font-weight: 500;
+    font-family: 'Hubballi';
+}
+
+.box-text .bx {
+    padding: 10px;
+    font-size: 20px;
+    background: var(--main-color);
+    color: var(--light-color);
+    border-radius: 0.5rem;
+}
+
+.box-text .bx:hover {
+    color: var(--hover-color);
 }
